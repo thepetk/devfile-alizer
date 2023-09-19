@@ -14,7 +14,9 @@ permissions:
 jobs:
   check-registry:
     name: Check registry entries
-    runs-on: 'ubuntu-latest'
+    # Temporary change for failure https://github.com/devfile/alizer/actions/runs/6230640715/job/16920449943
+    # For more info take a look at: https://github.com/actions/runner-images/issues/6709
+    runs-on: 'ubuntu-20.04'
     outputs:
       matrix: ${{ steps.get-stacks.outputs.matrix }}
     steps:
